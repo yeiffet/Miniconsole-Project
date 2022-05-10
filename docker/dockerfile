@@ -1,0 +1,8 @@
+FROM php:8.0.13-fpm-alpine
+ENV PROJECT_DIR=/var/www/html
+ENV PATH $PROJECT_DIR/bin:$PROJECT_DIR/vendor/bin:$PATH
+WORKDIR $PROJECT_DIR
+USER www-data
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY --chown=www-data:www-data ./ $PROJECT_DIR
+RUN mkdir -p $PROJECT_DIR/var/cache/dev && chown -R www-data:www-data $PROJECT_DIR/var/cache/dev

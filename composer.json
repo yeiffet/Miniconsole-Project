@@ -1,0 +1,33 @@
+{
+    "name": "yeiffet/miniconsole-project",
+    "license": "MIT",
+    "type": "project",
+    "description": "Mini Console Project Skeleton for fast utilities",
+    "authors": [
+        {
+            "name": "Jafet Juan López Rodríguez",
+            "email": "lopezrodriguezjj@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MiniConsole\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MiniConsole\\Tests\\": "test"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "symfony/console": "^5.4",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/yaml": "^5.4",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

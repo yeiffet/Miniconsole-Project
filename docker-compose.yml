@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  mini_console:
+    build:
+      context: .
+      dockerfile: docker/dockerfile
+    container_name: mini_console
+    volumes:
+      - ./:/var/www/html
